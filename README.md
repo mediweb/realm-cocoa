@@ -32,6 +32,16 @@ The API reference is located at [realm.io/docs/swift/latest/api/](https://realm.
 - **Have a bug to report?** [Open a GitHub issue](https://github.com/realm/realm-cocoa/issues/new). If possible, include the version of Realm, a full log, the Realm file, and a project that shows the issue.
 - **Have a feature request?** [Open a GitHub issue](https://github.com/realm/realm-cocoa/issues/new). Tell us what the feature should do and why you want the feature.
 
+## Building Realm for Xcode 12.2 or newer
+
+Since Realm 5.x is no longer being supported in order to support newer versions of Xcode use these build instructions.
+
+* Clone this repo from git, checkout the v5.5.0 tag.
+* Update submodules to download required dependencies: `git submodule update --init --recursive`.
+* Run `sh build.sh clean`.
+* Run `sh build.sh ios-swift`.
+* Replace the Realm.framework and RealmSwift.framework files in Xcode project.
+
 ## Building Realm
 
 In case you don't want to use the precompiled version, you can build Realm yourself from source.
